@@ -2,12 +2,14 @@ package com.example.demo4;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import lombok.Value;
+import lombok.Data;
 
 @JsonSerialize
-@Value
+@Data
 public class Activity {
 
+    @JsonProperty("id")
+    private Integer id;
     @JsonProperty("nazwa")
     private String name;
     @JsonProperty("priorytet")
